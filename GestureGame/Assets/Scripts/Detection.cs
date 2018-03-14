@@ -10,6 +10,7 @@ public class Detection : MonoBehaviour {
     public bool reanude;
     public float scrolling = -0;
     
+
     // Use this for initialization
     void Start ()
     {
@@ -31,12 +32,7 @@ public class Detection : MonoBehaviour {
     {
         if (other.tag == "Player")
         {
-            Debug.Log("Stop");  
+            Debug.Log("Stop");
         }
     }
-
-   
-
-
-
 }

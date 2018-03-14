@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Game_Manager : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    public Detection detection;
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
