@@ -8,38 +8,30 @@ public class Detection : MonoBehaviour {
     public GameObject scene;
     public bool stop;
     public bool reanude;
-
+    public float scrolling = -0;
+    
     // Use this for initialization
-    void Start () {
-		
+    void Start ()
+    {
+        scene.transform.localPosition = new Vector3(0.2084584f, 0.021f, 0f);
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-		if(stop)
+		if (Input.GetKey(KeyCode.P))
         {
-            scene.GetComponent<Animator>().enabled = false;
-            Debug.Log("Stop");
+            scene.transform.position = new Vector3(0.2084584f, 0.021f, scrolling);
+            scrolling += 0.05f;
         }
 
-       /* if (reanude)
-        {
-            scene.GetComponent<Animator>().enabled = true;
-            Debug.Log("Reanude");
-        }*/
     }
 
     public void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
-            stop = true;
-            if (Input.GetKey(KeyCode.P))
-            {
-                reanude = true;
-                stop = false;
-            }
+            Debug.Log("Stop");  
         }
     }
 
