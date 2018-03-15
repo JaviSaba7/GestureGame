@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Detection3 : MonoBehaviour {
 
-
+    public GameObject mono;
     public Manager manager;
     public GameObject pulseT;
     // Use this for initialization
@@ -23,6 +23,7 @@ public class Detection3 : MonoBehaviour {
     {
         if (other.tag == "Player")
         {
+            mono.GetComponent<Animator>().enabled = false;
             Debug.Log("Stop3");
             manager.stop_03 = true;
             pulseT.SetActive(true);

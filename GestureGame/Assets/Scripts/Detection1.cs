@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Detection1 : MonoBehaviour {
 
+    public GameObject mono;
 
     public Manager manager;
     public GameObject pulseP;
@@ -23,6 +24,8 @@ public class Detection1 : MonoBehaviour {
     {
         if (other.tag == "Player")
         {
+            mono.GetComponent<Animator>().enabled = false;
+
             Debug.Log("Stop");
             manager.stop_01 = true;
             pulseP.SetActive(true);

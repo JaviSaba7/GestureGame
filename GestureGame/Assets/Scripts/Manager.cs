@@ -9,7 +9,7 @@ public class Manager : MonoBehaviour {
     public bool object2 = false;
     public bool object3 = false;
     public bool object4 = false;
-    
+    public GameObject mono;
     //GENERAL
     public float level;
     public GameObject scene;
@@ -39,7 +39,7 @@ public class Manager : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-        scene.transform.localPosition = new Vector3(-0, 0.05f, -0);
+        scene.transform.localPosition = new Vector3(-0, 0.03f, -0);
 	}
 	
 	// Update is called once per frame
@@ -52,7 +52,7 @@ public class Manager : MonoBehaviour {
             //OBJECT 01
             if(stop_01 == false)
             {
-                scene.transform.position = new Vector3(0, 0.05f, scrolling);
+                scene.transform.position = new Vector3(0, 0.03f, scrolling);
                 scrolling += 0.05f;    
             }
 
@@ -60,7 +60,9 @@ public class Manager : MonoBehaviour {
              {
                   if (Input.GetKeyDown(KeyCode.P))
                   {
-                          cube1.SetActive(false);
+                        mono.GetComponent<Animator>().enabled = true;
+
+                        cube1.SetActive(false);
                           stop_01 = false;
                           Debug.Log("PULSE");
                           detect1.pulseP.SetActive(false);
@@ -76,13 +78,15 @@ public class Manager : MonoBehaviour {
              if (stop_02 == false)
              {
                          stop_01 = true;
-                        scene.transform.position = new Vector3(0, 0.05f, scrolling);
+                        scene.transform.position = new Vector3(0, 0.03f, scrolling);
                         scrolling += 0.05f;
              }
              if (stop_02)
              {
                    if (Input.GetKeyDown(KeyCode.S))
-                   {
+                    {
+                        mono.GetComponent<Animator>().enabled = true;
+
                          cube2.SetActive(false);
                          stop_02 = false;
                          Debug.Log("PULSE");
@@ -100,14 +104,16 @@ public class Manager : MonoBehaviour {
              {
                 stop_02 = true;
 
-                scene.transform.position = new Vector3(0, 0.05f, scrolling);
+                scene.transform.position = new Vector3(0, 0.03f, scrolling);
                   scrolling += 0.05f;
             }
             if (stop_03)
             {
                    if (Input.GetKeyDown(KeyCode.T))
-                   {
-                        cube3.SetActive(false);
+                     {
+                         mono.GetComponent<Animator>().enabled = true;
+
+                         cube3.SetActive(false);
                         stop_03 = false;
                         Debug.Log("PULSE");
                         detect3.pulseT.SetActive(false);
@@ -124,13 +130,15 @@ public class Manager : MonoBehaviour {
              {
                 stop_03 = true;
 
-                scene.transform.position = new Vector3(0, 0.05f, scrolling);
+                scene.transform.position = new Vector3(0, 0.03f, scrolling);
                    scrolling += 0.05f;
              }
              if (stop_04)
              {
                   if (Input.GetKeyDown(KeyCode.W))
                   {
+                         mono.GetComponent<Animator>().enabled = true;
+
                         cube4.SetActive(false);
                         stop_04 = false;
                         Debug.Log("PULSE");

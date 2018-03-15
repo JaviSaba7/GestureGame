@@ -477,6 +477,7 @@ MonoBehaviour:
   object2: 0
   object3: 0
   object4: 0
+  mono: {fileID: 1039523265}
   level: 0
   scene: {fileID: 1875801414}
   scrolling: 0
@@ -1938,6 +1939,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a4f2221f059e5d4ab45e5455244211f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mono: {fileID: 1039523265}
   manager: {fileID: 156255962}
   pulseT: {fileID: 1330039889}
 --- !u!23 &721136262
@@ -2049,6 +2051,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bc743bc042a02145b8cea46cff39cb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mono: {fileID: 1039523265}
   manager: {fileID: 156255962}
   pulseW: {fileID: 652985036}
 --- !u!23 &723749634
@@ -5160,6 +5163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d92a9be052a9ec5409bad7f484c7eb61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mono: {fileID: 1039523265}
   manager: {fileID: 156255962}
   pulseS: {fileID: 2082589604}
 --- !u!23 &1865819417
@@ -5531,6 +5535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b56c57dd7858a4140840e9dd504a9140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mono: {fileID: 1039523265}
   manager: {fileID: 156255962}
   pulseP: {fileID: 1343917502}
 --- !u!23 &2011771140
