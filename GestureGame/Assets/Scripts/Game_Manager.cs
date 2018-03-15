@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Game_Manager : MonoBehaviour {
 
-    public Detection detection;
+
 
     // Use this for initialization
     void Start () {
