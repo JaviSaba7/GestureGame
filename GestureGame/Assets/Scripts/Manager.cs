@@ -5,15 +5,16 @@ using UnityEngine.UI;
 public class Manager : MonoBehaviour {
 
 
+    //GENERAL
+    public float level;
+    public GameObject scene;
+    public float scrolling = -528;
+
     public bool object1 = true;
     public bool object2 = false;
     public bool object3 = false;
     public bool object4 = false;
     public GameObject mono;
-    //GENERAL
-    public float level;
-    public GameObject scene;
-    public float scrolling = -528;
 
     //OBJECT 01
     public bool stop_01 = false;
@@ -45,8 +46,6 @@ public class Manager : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-       
-
         if(object1)
         { 
             //OBJECT 01
@@ -56,43 +55,40 @@ public class Manager : MonoBehaviour {
                 scrolling += 0.05f;    
             }
 
-             if(stop_01)
-             {
-                  if (Input.GetKeyDown(KeyCode.P))
-                  {
-                        mono.GetComponent<Animator>().enabled = true;
-
-                        cube1.SetActive(false);
-                          stop_01 = false;
-                          Debug.Log("PULSE");
-                          detect1.pulseP.SetActive(false);
-                          object2 = true;
-                  }
-             }
+            if(stop_01)
+            {
+                 if (Input.GetKeyDown(KeyCode.P))
+                 {
+                       mono.GetComponent<Animator>().enabled = true;
+                       cube1.SetActive(false);
+                       stop_01 = false;
+                       Debug.Log("PULSE");
+                       detect1.pulseP.SetActive(false);
+                       object2 = true;
+                 }
+            }
         }
        
-
         if(object2)
         {
             //OBJECT 02
              if (stop_02 == false)
              {
-                         stop_01 = true;
-                        scene.transform.position = new Vector3(0, 0.03f, scrolling);
-                        scrolling += 0.05f;
+                    stop_01 = true;
+                    scene.transform.position = new Vector3(0, 0.03f, scrolling);
+                    scrolling += 0.05f;
              }
+
              if (stop_02)
              {
                    if (Input.GetKeyDown(KeyCode.S))
-                    {
-                        mono.GetComponent<Animator>().enabled = true;
-
+                   {
+                         mono.GetComponent<Animator>().enabled = true;
                          cube2.SetActive(false);
                          stop_02 = false;
                          Debug.Log("PULSE");
                          detect2.pulseS.SetActive(false);
                          object3 = true;
-
                    }
              } 
         }
@@ -101,25 +97,23 @@ public class Manager : MonoBehaviour {
         {
             //OBJECT 03
             if (stop_03 == false)
-             {
+            {
                 stop_02 = true;
-
                 scene.transform.position = new Vector3(0, 0.03f, scrolling);
-                  scrolling += 0.05f;
+                scrolling += 0.05f;
             }
+
             if (stop_03)
             {
-                   if (Input.GetKeyDown(KeyCode.T))
-                     {
-                         mono.GetComponent<Animator>().enabled = true;
-
-                         cube3.SetActive(false);
-                        stop_03 = false;
-                        Debug.Log("PULSE");
-                        detect3.pulseT.SetActive(false);
-                        object4 = true;
-
-                   }
+                if (Input.GetKeyDown(KeyCode.T))
+                {
+                     mono.GetComponent<Animator>().enabled = true;
+                     cube3.SetActive(false);
+                     stop_03 = false;
+                     Debug.Log("PULSE");
+                     detect3.pulseT.SetActive(false);
+                     object4 = true;
+                }
             }
         }
         
@@ -128,24 +122,22 @@ public class Manager : MonoBehaviour {
             //OBJECT 04
              if (stop_04 == false)
              {
-                stop_03 = true;
-
-                scene.transform.position = new Vector3(0, 0.03f, scrolling);
-                   scrolling += 0.05f;
+                 stop_03 = true;
+                 scene.transform.position = new Vector3(0, 0.03f, scrolling);
+                 scrolling += 0.05f;
              }
+
              if (stop_04)
              {
                   if (Input.GetKeyDown(KeyCode.W))
                   {
-                         mono.GetComponent<Animator>().enabled = true;
-
-                        cube4.SetActive(false);
-                        stop_04 = false;
-                        Debug.Log("PULSE");
-                        detect4.pulseW.SetActive(false);
+                       mono.GetComponent<Animator>().enabled = true;
+                       cube4.SetActive(false);
+                       stop_04 = false;
+                       Debug.Log("PULSE");
+                       detect4.pulseW.SetActive(false);                   
                   }
              }
         }       
     }
-
 }
