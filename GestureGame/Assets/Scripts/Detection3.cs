@@ -32,9 +32,7 @@ public class Detection3 : MonoBehaviour {
         else
         {
             pulseT.SetActive(false);
-
             manager.stop_03 = false;
-
         }
     }
 }

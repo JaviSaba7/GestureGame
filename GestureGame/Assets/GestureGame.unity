@@ -473,14 +473,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb7e3238513fe4f43930bd0f23497bdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: 0
+  scene: {fileID: 1875801414}
+  scrolling: 0
   object1: 1
   object2: 0
   object3: 0
   object4: 0
   mono: {fileID: 1039523265}
-  level: 0
-  scene: {fileID: 1875801414}
-  scrolling: 0
   stop_01: 0
   cube1: {fileID: 2018309163}
   detect1: {fileID: 2011771139}

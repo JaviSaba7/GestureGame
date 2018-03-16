@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Manager : MonoBehaviour {
 
-
     //GENERAL
     public float level;
     public GameObject scene;
@@ -36,7 +35,6 @@ public class Manager : MonoBehaviour {
     public GameObject cube4;
     public Detection4 detect4;
 
-
     // Use this for initialization
     void Start ()
     {
@@ -57,7 +55,7 @@ public class Manager : MonoBehaviour {
 
             if(stop_01)
             {
-                 if (Input.GetKeyDown(KeyCode.P))
+                 if (Input.GetKeyDown(KeyCode.P)) //pressing the key that appears on the screen
                  {
                        mono.GetComponent<Animator>().enabled = true;
                        cube1.SetActive(false);
@@ -135,7 +133,7 @@ public class Manager : MonoBehaviour {
                        cube4.SetActive(false);
                        stop_04 = false;
                        Debug.Log("PULSE");
-                       detect4.pulseW.SetActive(false);                   
+                       detect4.pulseW.SetActive(false); 
                   }
              }
         }       

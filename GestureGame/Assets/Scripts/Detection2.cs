@@ -25,7 +25,6 @@ public class Detection2 : MonoBehaviour {
         if (other.tag == "Player")
         {
             mono.GetComponent<Animator>().enabled = false;
-
             Debug.Log("Stop2");
             manager.stop_02 = true;
             pulseS.SetActive(true);
@@ -34,9 +33,7 @@ public class Detection2 : MonoBehaviour {
         else
         {
             pulseS.SetActive(false);
-
             manager.stop_02 = false;
-
         }
     }
 }

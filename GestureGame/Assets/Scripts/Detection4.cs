@@ -25,18 +25,14 @@ public class Detection4 : MonoBehaviour {
         if (other.tag == "Player")
         {
             mono.GetComponent<Animator>().enabled = false;
-
             Debug.Log("Stop4");
             manager.stop_04 = true;
             pulseW.SetActive(true);
-
         }
         else
         {
             pulseW.SetActive(false);
-
             manager.stop_04 = false;
-
         }
     }
 }
