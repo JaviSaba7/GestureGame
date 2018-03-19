@@ -285,12 +285,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\GestureRecognizer\Example\ExampleGestureHandler.cs" />
+    <Compile Include="Assets\GestureRecognizer\Scripts\DrawDetector.cs" />
+    <Compile Include="Assets\GestureRecognizer\Scripts\GestureData.cs" />
+    <Compile Include="Assets\GestureRecognizer\Scripts\GesturePattern.cs" />
+    <Compile Include="Assets\GestureRecognizer\Scripts\GesturePatternDraw.cs" />
+    <Compile Include="Assets\GestureRecognizer\Scripts\Recognizer.cs" />
+    <Compile Include="Assets\GestureRecognizer\Scripts\UILineRenderer.cs" />
     <Compile Include="Assets\Scripts\Detection1.cs" />
     <Compile Include="Assets\Scripts\Detection2.cs" />
     <Compile Include="Assets\Scripts\Detection3.cs" />
     <Compile Include="Assets\Scripts\Detection4.cs" />
     <Compile Include="Assets\Scripts\Game_Manager.cs" />
     <Compile Include="Assets\Scripts\Manager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\GestureRecognizer\UPDATE GUIDE.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
