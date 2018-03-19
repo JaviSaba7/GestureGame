@@ -2,6 +2,3 @@ sceneSetups:
 - path: Assets/GestureGame.unity
   isLoaded: 1
   isActive: 1
-- path: Assets/GestureRecognizer/Example/Example.unity
-  isLoaded: 1
-  isActive: 0
