@@ -31,7 +31,7 @@ public class ExampleGestureHandler : MonoBehaviour {
 			textResult.text = result.gesture.id + "\n" + Mathf.RoundToInt (result.score.score * 100) + "%";
 			StartCoroutine (Blink (result.gesture.id));
 		} else {
-			textResult.text = "?";
+			textResult.text = "FAILED";
 		}
 	}
 

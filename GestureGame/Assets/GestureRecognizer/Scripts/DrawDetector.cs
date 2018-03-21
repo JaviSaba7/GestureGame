@@ -8,10 +8,11 @@ using UnityEngine.Events;
 
 namespace GestureRecognizer {
 
-	/// <summary>
-	/// Captures player drawing and call the Recognizer to discover which gesture player id.
-	/// Calls 'OnRecognize' event when something is recognized.
-	/// </summary>
+	// <summary>
+	// Captures player drawing and call the Recognizer to discover which gesture player id.
+	// Calls 'OnRecognize' event when something is recognized.
+	// </summary>
+
 	public class DrawDetector : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerClickHandler {
 		
 		public Recognizer recognizer;
@@ -45,7 +46,6 @@ namespace GestureRecognizer {
 
 		RectTransform rectTransform;
 
-
 		void Start(){
 			line.relativeSize = true;
 			line.LineList = false;
@@ -54,7 +54,8 @@ namespace GestureRecognizer {
 			UpdateLines ();
 		}
 
-		void OnValidate(){
+		void OnValidate()
+        {
 			maxLines = Mathf.Max (minLines, maxLines);
 		}
 

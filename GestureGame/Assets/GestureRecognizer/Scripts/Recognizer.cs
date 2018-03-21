@@ -194,7 +194,8 @@ namespace GestureRecognizer {
 					float cd = permutScore.curvatureDistance;
 					float ad = permutScore.angleDistance;
 
-					if (permutScore > bestScore) {
+					if (permutScore > bestScore)
+                    {
 						bestScore = permutScore;
 						bestGesture = gestureAsset;
 					}
