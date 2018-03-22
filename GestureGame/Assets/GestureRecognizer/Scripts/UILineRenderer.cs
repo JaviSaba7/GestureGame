@@ -57,6 +57,8 @@ namespace GestureRecognizer {
 			}
 		}
 
+
+        
 		/// <summary>
 		/// Texture to be used.
 		/// </summary>

@@ -8,11 +8,6 @@ using UnityEngine.Events;
 
 namespace GestureRecognizer {
 
-	// <summary>
-	// Captures player drawing and call the Recognizer to discover which gesture player id.
-	// Calls 'OnRecognize' event when something is recognized.
-	// </summary>
-
 	public class DrawDetector : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerClickHandler {
 		
 		public Recognizer recognizer;
@@ -60,7 +55,8 @@ namespace GestureRecognizer {
 		}
 
 		public void UpdateLines(){
-			while (lines.Count < data.lines.Count) {
+			while (lines.Count < data.lines.Count)
+            {
 				var newLine = Instantiate (line, line.transform.parent);
 				lines.Add (newLine);
 			}
@@ -81,7 +77,8 @@ namespace GestureRecognizer {
 			return normalized;
 		}
 
-		Vector2 FixedPosition(Vector2 position){
+		Vector2 FixedPosition(Vector2 position)
+        {
 			return position;
 			//var local = rectTransform.InverseTransformPoint (position);
 			//var normalized = Rect.PointToNormalized (rectTransform.rect, local);

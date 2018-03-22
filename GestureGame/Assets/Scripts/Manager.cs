@@ -35,6 +35,7 @@ public class Manager : MonoBehaviour {
     public GameObject cube4;
     public Detection4 detect4;
 
+
     // Use this for initialization
     void Start ()
     {
@@ -50,9 +51,9 @@ public class Manager : MonoBehaviour {
             if(stop_01 == false)
             {
                 scene.transform.position = new Vector3(0, 0.03f, scrolling);
-                scrolling += 0.05f;    
+                scrolling += 0.05f;
             }
-
+         
             if(stop_01)
             {
                  if (Input.GetKeyDown(KeyCode.P)) //pressing the key that appears on the screen
@@ -118,6 +119,7 @@ public class Manager : MonoBehaviour {
         if(object4)
         {
             //OBJECT 04
+
              if (stop_04 == false)
              {
                  stop_03 = true;
